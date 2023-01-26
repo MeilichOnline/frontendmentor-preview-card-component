@@ -1,0 +1,129 @@
+:root {
+    --clr-bg-main: hsl(233, 47%, 7%);
+    --clr-bg-arcticle: hsl(244, 38%, 16%);
+    --clr-txt-100:  hsl(0, 0%, 100%);
+    --clr-txt-300: hsla(0, 0%, 100%, 0.75);
+    --clr-txt-accent: hsl(277, 64%, 61%);
+
+    --ff-inter: 'Inter', sans-serif;
+    --ff-lexend: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--clr-bg-main);
+    color: var(--clr-txt-300);
+    font-family: var(--ff-lexend);
+    font-size: 15px;
+}
+
+article {
+    margin: 1rem;
+    border: 2px solid black;
+    padding: 0;
+    width: clamp(304px, 50%, 600px); ;
+    background-color: var(--clr-bg-arcticle);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.clr-100 {
+    color: var(--clr-txt-100);
+}
+
+.clr-300 {
+    color: var(--clr-txt-300);
+
+}
+
+.clr-accent {
+    color: var(--clr-txt-accent);
+}
+
+.ff-inter {
+    font-family: var(--ff-inter);
+}
+
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-small{
+    font-size: .6em;
+}
+
+.margin-all {
+    margin: 1rem;
+}
+
+.padding-all {
+    padding: .2rem;
+}
+
+.round-edges-all {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.content {
+    display: grid
+}
+
+.descripticon {
+    text-align: center;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    article{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    picture {
+        flex: 1 1 auto;
+    }
+
+    .content {
+        flex: 1 2 auto;
+    }
+
+    .descripticon {
+        text-align: left;
+    }
+
+    .summary {
+        flex-direction: row;
+    }
+}
+
